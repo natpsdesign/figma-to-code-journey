@@ -104,7 +104,7 @@ const Index = () => {
         {/* Comunidades em destaque */}
         <section className="mb-6">
           <SectionTitle>Comunidades em destaque</SectionTitle>
-          <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+          <div className="flex gap-4 pb-2">
             {featuredCommunities.map((c) => (
               <FeaturedCard key={c.name} {...c} />
             ))}
