@@ -1,10 +1,10 @@
-import { Home, Users, MessageSquare, Settings } from "lucide-react";
+import { Home, Users, MessageCircle, LayoutGrid } from "lucide-react";
 
 const navItems = [
   { icon: Home, label: "Início", active: false },
   { icon: Users, label: "Comunidades", active: true },
-  { icon: MessageSquare, label: "Chats", active: false },
-  { icon: Settings, label: "Configurações", active: false },
+  { icon: MessageCircle, label: "Chats", active: false },
+  { icon: LayoutGrid, label: "Configurações", active: false },
 ];
 
 const BottomNav = () => {
