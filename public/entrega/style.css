@@ -32,7 +32,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px 4px;
-  font-size: 12px;
+}
+
+.status-time {
+  font-size: 14px;
   font-weight: 600;
   color: #1e2a3a;
 }
@@ -40,7 +43,7 @@ body {
 .status-bar-icons {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
 
 /* ===== HEADER ===== */
