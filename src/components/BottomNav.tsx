@@ -1,15 +1,15 @@
-import { Home, Users, MessageCircle, LayoutGrid } from "lucide-react";
+import { Home, Users, MessageSquare, LayoutGrid } from "lucide-react";
 
 const navItems = [
   { icon: Home, label: "Início", active: false },
   { icon: Users, label: "Comunidades", active: true },
-  { icon: MessageCircle, label: "Chats", active: false },
+  { icon: MessageSquare, label: "Chats", active: false },
   { icon: LayoutGrid, label: "Configurações", active: false },
 ];
 
 const BottomNav = () => {
   return (
-    <nav className="fixed bottom-0 left-0 right-0 flex items-center justify-around border-t border-border bg-card px-2 py-2">
+    <nav className="absolute bottom-0 left-0 right-0 flex items-center justify-around border-t border-border bg-card px-2 py-2">
       {navItems.map((item) => (
         <button
           key={item.label}

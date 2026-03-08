@@ -49,7 +49,7 @@ const SectionTitle = ({ children }: { children: React.ReactNode }) => (
 
 const Index = () => {
   return (
-    <div className="mx-auto flex min-h-[1081px] w-[390px] flex-col rounded-[24px] bg-card overflow-hidden">
+    <div className="relative mx-auto flex min-h-[1081px] w-[390px] flex-col rounded-[24px] bg-card overflow-hidden">
       {/* Status bar */}
       <div className="flex items-center justify-between px-5 pt-3 pb-1">
         <span className="text-sm font-semibold text-foreground">9:41</span>
@@ -73,7 +73,7 @@ const Index = () => {
 
       {/* Search */}
       <div className="px-4 pb-4">
-        <div className="flex items-center gap-2 rounded-xl bg-muted px-4 py-2.5">
+        <div className="flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2.5">
           <Search className="h-4 w-4 text-muted-foreground" />
           <span className="text-sm text-muted-foreground">Pesquisar</span>
         </div>
