@@ -84,7 +84,7 @@ const Index = () => {
         {/* Comunidades que você participa */}
         <section className="mb-6">
           <SectionTitle>Comunidades que você participa</SectionTitle>
-          <div className="flex gap-3 overflow-x-auto pb-2" style={{ scrollbarWidth: 'none' }}>
+          <div className="grid grid-cols-2 gap-3">
             {participaCommunities.map((c) => (
               <CommunityCard key={c.name} {...c} />
             ))}
