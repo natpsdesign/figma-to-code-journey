@@ -160,17 +160,7 @@ body {
 .featured-scroll {
   display: flex;
   gap: 16px;
-  overflow-x: auto;
   padding-bottom: 8px;
-}
-
-.featured-scroll::-webkit-scrollbar {
-  display: none;
-}
-
-.featured-scroll {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .featured-card {
