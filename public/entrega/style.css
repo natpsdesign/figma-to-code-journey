@@ -32,7 +32,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px 4px;
-  font-size: 12px;
+}
+
+.status-time {
+  font-size: 14px;
   font-weight: 600;
   color: #1e2a3a;
 }
@@ -40,7 +43,7 @@ body {
 .status-bar-icons {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
 
 /* ===== HEADER ===== */
@@ -82,7 +85,7 @@ body {
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   padding: 10px 16px;
-  background-color: #f7f7f8;
+  background-color: #f3f4f6;
 }
 
 .search-box svg {
@@ -157,17 +160,7 @@ body {
 .featured-scroll {
   display: flex;
   gap: 16px;
-  overflow-x: auto;
   padding-bottom: 8px;
-}
-
-.featured-scroll::-webkit-scrollbar {
-  display: none;
-}
-
-.featured-scroll {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .featured-card {

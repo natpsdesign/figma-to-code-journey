@@ -51,12 +51,12 @@ const Index = () => {
   return (
     <div className="mx-auto flex min-h-[1081px] w-[390px] flex-col rounded-[24px] bg-card overflow-hidden">
       {/* Status bar */}
-      <div className="flex items-center justify-between px-5 pt-3 pb-1 text-xs font-semibold text-foreground">
-        <span>9:41</span>
-        <div className="flex items-center gap-1">
-          <span>●●●●</span>
-          <span>📶</span>
-          <span>🔋</span>
+      <div className="flex items-center justify-between px-5 pt-3 pb-1">
+        <span className="text-sm font-semibold text-foreground">9:41</span>
+        <div className="flex items-center gap-1.5">
+          <svg width="17" height="11" viewBox="0 0 17 11" fill="none"><rect x="0" y="3" width="3" height="8" rx="1" fill="#1e2a3a"/><rect x="4.5" y="2" width="3" height="9" rx="1" fill="#1e2a3a"/><rect x="9" y="0.5" width="3" height="10.5" rx="1" fill="#1e2a3a"/><rect x="13.5" y="0" width="3" height="11" rx="1" fill="#1e2a3a" opacity="0.3"/></svg>
+          <svg width="15" height="11" viewBox="0 0 15 11" fill="none"><path d="M7.5 2C5.09 2 2.88 2.92 1.27 4.47L0 3.2C1.97 1.24 4.6 0 7.5 0C10.4 0 13.03 1.24 15 3.2L13.73 4.47C12.12 2.92 9.91 2 7.5 2ZM3.82 5.98L7.5 10L11.18 5.98C10.12 4.98 8.87 4.5 7.5 4.5C6.13 4.5 4.88 4.98 3.82 5.98Z" fill="#1e2a3a"/></svg>
+          <svg width="25" height="12" viewBox="0 0 25 12" fill="none"><rect x="0" y="1" width="21" height="10" rx="2" stroke="#1e2a3a" strokeWidth="1"/><rect x="22" y="4" width="2" height="4" rx="1" fill="#1e2a3a" opacity="0.4"/><rect x="1.5" y="2.5" width="18" height="7" rx="1" fill="#1e2a3a"/></svg>
         </div>
       </div>
 
@@ -73,7 +73,7 @@ const Index = () => {
 
       {/* Search */}
       <div className="px-4 pb-4">
-        <div className="flex items-center gap-2 rounded-xl border border-border bg-background px-4 py-2.5">
+        <div className="flex items-center gap-2 rounded-xl border border-border bg-muted px-4 py-2.5">
           <Search className="h-4 w-4 text-muted-foreground" />
           <span className="text-sm text-muted-foreground">Pesquisar</span>
         </div>
@@ -104,7 +104,7 @@ const Index = () => {
         {/* Comunidades em destaque */}
         <section className="mb-6">
           <SectionTitle>Comunidades em destaque</SectionTitle>
-          <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+          <div className="flex gap-4 pb-2">
             {featuredCommunities.map((c) => (
               <FeaturedCard key={c.name} {...c} />
             ))}
