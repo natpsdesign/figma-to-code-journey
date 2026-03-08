@@ -117,22 +117,10 @@ body {
 }
 
 /* ===== SCROLL HORIZONTAL DAS COMUNIDADES ===== */
-.community-scroll {
-  display: flex;
+.community-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
-  overflow-x: auto;
-  padding-bottom: 8px;
-  scroll-snap-type: x mandatory;
-}
-
-/* Esconde a scrollbar mas mantém funcional */
-.community-scroll::-webkit-scrollbar {
-  display: none;
-}
-
-.community-scroll {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 /* ===== CARD DE COMUNIDADE ===== */
@@ -144,9 +132,6 @@ body {
   border-radius: 12px;
   padding: 12px 16px;
   background-color: #ffffff;
-  min-width: 170px;
-  flex-shrink: 0;
-  scroll-snap-align: start;
 }
 
 .community-card img {
