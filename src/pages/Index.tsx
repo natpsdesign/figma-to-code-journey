@@ -84,14 +84,9 @@ const Index = () => {
         {/* Comunidades que você participa */}
         <section className="mb-6">
           <SectionTitle>Comunidades que você participa</SectionTitle>
-          <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
-            {participaCommunities.slice(0, 2).map((c) => (
-              <CommunityCard key={c.name + "1"} {...c} />
-            ))}
-          </div>
-          <div className="mt-3 flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
-            {participaCommunities.slice(2).map((c) => (
-              <CommunityCard key={c.name + "2"} {...c} />
+          <div className="flex gap-3 overflow-x-auto pb-2" style={{ scrollbarWidth: 'none' }}>
+            {participaCommunities.map((c) => (
+              <CommunityCard key={c.name} {...c} />
             ))}
           </div>
         </section>
@@ -99,14 +94,9 @@ const Index = () => {
         {/* Comunidades que podem te interessar */}
         <section className="mb-6">
           <SectionTitle>Comunidades que podem te interessar</SectionTitle>
-          <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
-            {interessaCommunities.slice(0, 2).map((c) => (
-              <CommunityCard key={c.name + "3"} {...c} />
-            ))}
-          </div>
-          <div className="mt-3 flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
-            {interessaCommunities.slice(2).map((c) => (
-              <CommunityCard key={c.name + "4"} {...c} />
+          <div className="flex gap-3 overflow-x-auto pb-2" style={{ scrollbarWidth: 'none' }}>
+            {interessaCommunities.map((c) => (
+              <CommunityCard key={c.name} {...c} />
             ))}
           </div>
         </section>
