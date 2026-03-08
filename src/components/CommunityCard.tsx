@@ -6,7 +6,7 @@ interface CommunityCardProps {
 
 const CommunityCard = ({ image, name, members }: CommunityCardProps) => {
   return (
-    <div className="flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 min-w-[170px]">
+    <div className="flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3">
       <img
         src={image}
         alt={name}
