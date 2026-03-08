@@ -73,7 +73,7 @@ const Index = () => {
 
       {/* Search */}
       <div className="px-4 pb-4">
-        <div className="flex items-center gap-2 rounded-xl border border-border bg-background px-4 py-2.5">
+        <div className="flex items-center gap-2 rounded-xl border border-border bg-muted px-4 py-2.5">
           <Search className="h-4 w-4 text-muted-foreground" />
           <span className="text-sm text-muted-foreground">Pesquisar</span>
         </div>
