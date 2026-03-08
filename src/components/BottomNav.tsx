@@ -9,11 +9,11 @@ const navItems = [
 
 const BottomNav = () => {
   return (
-    <nav className="absolute bottom-0 left-0 right-0 flex items-center justify-around border-t border-border bg-card px-2 py-2">
+    <nav className="absolute bottom-0 left-0 right-0 flex items-center justify-around border-t border-border bg-card px-2 py-3 pb-4">
       {navItems.map((item) => (
         <button
           key={item.label}
-          className="flex flex-col items-center gap-0.5 px-3 py-1"
+          className="flex flex-col items-center justify-center gap-1 px-3 py-1 min-w-[64px]"
         >
           <item.icon
             className={`h-5 w-5 ${item.active ? "text-primary" : "text-muted-foreground"}`}
