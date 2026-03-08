@@ -49,7 +49,7 @@ const SectionTitle = ({ children }: { children: React.ReactNode }) => (
 
 const Index = () => {
   return (
-    <div className="mx-auto flex min-h-screen max-w-md flex-col bg-card">
+    <div className="mx-auto flex min-h-[1081px] w-[390px] flex-col rounded-[24px] bg-card overflow-hidden">
       {/* Status bar */}
       <div className="flex items-center justify-between px-5 pt-3 pb-1 text-xs font-semibold text-foreground">
         <span>9:41</span>
