@@ -9,18 +9,20 @@ interface FeaturedCardProps {
 const FeaturedCard = ({ coverImage, avatarImage, name, description, members }: FeaturedCardProps) => {
   return (
     <article className="flex w-[196px] shrink-0 flex-col overflow-hidden rounded-lg border border-border bg-card">
-      {/* Header with cover and avatar */}
+      {/* Cover image */}
       <div className="relative h-[110px] w-full overflow-hidden rounded-t-lg">
         <img src={coverImage} alt="" className="h-full w-full object-cover bg-grey-300" />
+      </div>
+      {/* Avatar overlapping cover */}
+      <div className="relative px-4">
         <img
           src={avatarImage}
           alt=""
-          className="absolute left-[15px] top-[78px] h-10 w-10 rounded-full border border-card object-cover bg-card"
+          className="absolute -top-5 left-4 h-10 w-10 rounded-full border-2 border-card object-cover bg-card"
         />
       </div>
-
       {/* Body */}
-      <div className="flex flex-1 flex-col gap-1 px-4 pt-5 pb-3">
+      <div className="flex flex-1 flex-col gap-1 px-4 pt-6 pb-3">
         <h3 className="text-base font-semibold leading-[1.5] text-foreground">{name}</h3>
         <p className="text-xs leading-[1.5] text-muted-foreground">{description}</p>
         <div className="mt-3 flex items-center gap-2">
