@@ -6,17 +6,17 @@ interface CommunityCardProps {
 
 const CommunityCard = ({ image, name, members }: CommunityCardProps) => {
   return (
-    <div className="flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3">
+    <article className="flex w-[162px] min-h-[72px] items-center gap-3 rounded-lg border border-grey-200 bg-card px-3.5 py-3 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
       <img
         src={image}
-        alt={name}
-        className="h-12 w-12 rounded-full object-cover"
+        alt=""
+        className="h-12 w-12 shrink-0 rounded-full border border-card object-cover bg-grey-200"
       />
-      <div>
-        <p className="text-sm font-semibold text-foreground">{name}</p>
-        <p className="text-xs text-muted-foreground">{members}</p>
+      <div className="flex min-w-0 flex-1 flex-col gap-0.5">
+        <span className="text-[15px] font-semibold leading-[1.4] text-foreground">{name}</span>
+        <span className="text-xs leading-[1.4] text-muted-foreground">{members}</span>
       </div>
-    </div>
+    </article>
   );
 };
 
