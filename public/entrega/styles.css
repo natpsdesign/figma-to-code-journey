@@ -1,7 +1,7 @@
 /* ============================================
    Protótipo Comunidades - HTML5 + CSS
    Base: 390px × 1081px, radius 24px
-   Fiel ao Figma, responsivo
+   Fiel ao Figma
    ============================================ */
 
 :root {
@@ -45,11 +45,11 @@ body {
   align-items: flex-start;
 }
 
-/* Container da tela (mobile first) */
+/* Container da tela */
 .screen {
   width: 100%;
   max-width: var(--screen-width);
-  min-height: var(--screen-height);
+  height: var(--screen-height);
   background: var(--grey-100);
   border-radius: var(--screen-radius);
   overflow: hidden;
@@ -57,13 +57,6 @@ body {
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-}
-
-@media (min-width: 391px) {
-  .screen {
-    min-height: 100vh;
-    max-height: 100vh;
-  }
 }
 
 /* ---------- Barra de status ---------- */
@@ -95,16 +88,6 @@ body {
   gap: 4px;
 }
 
-.status-bar__icon {
-  display: block;
-  object-fit: contain;
-}
-
-.status-bar__icon--battery {
-  width: 21px;
-  height: 12px;
-}
-
 /* ---------- Cabeçalho ---------- */
 .head {
   position: relative;
@@ -126,18 +109,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.head__back img,
-.head__menu img {
-  width: 19px;
-  height: 18px;
-  display: block;
-}
-
-.head__menu img {
-  width: 5px;
-  height: 18px;
 }
 
 .head__title {
@@ -190,7 +161,7 @@ body {
 /* ---------- Conteúdo rolável ---------- */
 .content {
   flex: 1;
-  padding: 0 0 24px;
+  padding-bottom: 88px;
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
@@ -201,8 +172,8 @@ body {
   margin-bottom: 24px;
 }
 
-.section:last-child {
-  margin-bottom: 0;
+.section--featured {
+  margin-bottom: 8px;
 }
 
 .section__title {
@@ -216,7 +187,6 @@ body {
 }
 
 /* ---------- Listas de cartões ---------- */
-/* Container com scroll horizontal (2 colunas visíveis, conteúdo em grid 2x2) */
 .cards-scroll {
   padding: 0 var(--content-px);
   overflow-x: auto;
@@ -229,12 +199,13 @@ body {
   display: none;
 }
 
-/* Grid 2 linhas × 4 colunas para os cartões pequenos (2 colunas visíveis na tela) */
+/* Grid 2 linhas, preenchimento vertical por coluna */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(4, 162px);
-  grid-template-rows: auto auto;
-  gap: 10px 10px;
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  grid-auto-columns: 162px;
+  gap: 10px;
   width: max-content;
 }
 
@@ -245,7 +216,7 @@ body {
   padding-left: var(--content-px);
 }
 
-/* ---------- Cartão pequeno (ícone à esquerda, texto à direita) ---------- */
+/* ---------- Cartão pequeno ---------- */
 .card {
   scroll-snap-align: start;
   flex-shrink: 0;
@@ -323,13 +294,12 @@ body {
   border: 1px solid var(--grey-300);
   border-radius: 8px;
   background: var(--grey-100);
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
 }
 
-.card__header {
-  position: relative;
+.card__cover-wrap {
   width: 100%;
   height: 110px;
   border-radius: 8px 8px 0 0;
@@ -344,20 +314,26 @@ body {
   background: var(--grey-300);
 }
 
+.card__avatar-wrap {
+  position: relative;
+  padding: 0 16px;
+  height: 0;
+}
+
 .card__avatar--over {
   position: absolute;
-  left: 15px;
-  top: 78px;
+  left: 16px;
+  top: -20px;
   width: 40px;
   height: 40px;
-  border: 1px solid var(--grey-100);
+  border: 2px solid var(--grey-100);
   border-radius: 50%;
   object-fit: cover;
   background: var(--grey-100);
 }
 
 .card__body {
-  padding: 20px 16px 16px;
+  padding: 24px 16px 12px;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -386,37 +362,40 @@ body {
   display: flex;
   gap: 8px;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
 .card__badge {
-  padding: 4px 12px;
-  border-radius: 16px;
+  padding: 6px 16px;
+  border-radius: 9999px;
   background: var(--grey-100);
-  border: 1px solid var(--brand-primary);
+  border: 1px solid var(--grey-300);
   font-family: var(--font-nunito);
   font-weight: 600;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 1;
   color: var(--grey-700);
 }
 
 .card__btn {
-  padding: 4px 12px;
-  border-radius: 16px;
+  padding: 6px 20px;
+  border-radius: 9999px;
   background: var(--brand-primary);
   color: var(--grey-100);
   font-family: var(--font-nunito);
   font-weight: 600;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 1;
   border: none;
   cursor: pointer;
 }
 
 /* ---------- Barra de navegação inferior ---------- */
 .bottom-nav {
-  flex-shrink: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -442,38 +421,9 @@ body {
   font-weight: 400;
 }
 
-.bottom-nav__item img {
-  display: block;
-  width: auto;
-  height: auto;
-}
-
 .bottom-nav__item--active {
   color: var(--brand-primary);
   font-weight: 600;
   border-bottom: 2px solid var(--brand-primary);
   padding-bottom: 2px;
-}
-
-.bottom-nav__item--active img {
-  filter: none;
-}
-
-/* Responsivo: tablets e desktop (mantém proporções do protótipo) */
-@media (min-width: 600px) {
-  .card--featured {
-    width: 220px;
-    max-width: 280px;
-  }
-
-  .cards-scroll--featured {
-    flex-wrap: wrap;
-    padding-right: var(--content-px);
-  }
-}
-
-@media (min-width: 900px) {
-  .screen {
-    max-width: 480px;
-  }
 }
