@@ -187,7 +187,6 @@ body {
 
 /* ---------- Listas de cartões ---------- */
 .cards-scroll {
-  padding: 0 var(--content-px);
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
@@ -208,6 +207,8 @@ body {
   gap: 10px;
   width: max-content;
   min-width: max-content;
+  padding-left: var(--content-px);
+  padding-right: var(--content-px);
 }
 
 .cards-scroll--featured {
@@ -216,7 +217,7 @@ body {
   flex-wrap: nowrap;
   gap: 16px;
   padding-left: var(--content-px);
-  padding-right: 0;
+  padding-right: var(--content-px);
 }
 
 /* ---------- Cartão pequeno ---------- */
