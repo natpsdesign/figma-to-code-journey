@@ -39,14 +39,14 @@ const interessaCommunities = [
 const featuredCommunities = [
   {
     coverImage: featuredUxImg,
-    avatarImage: uxDesignImg,
+    avatarImage: avatarUxDesigners,
     name: "UX Designers",
     description: "Nosso propósito é fortalecer o ecossistema de design",
     members: "9.7K",
   },
   {
     coverImage: featuredRecifeImg,
-    avatarImage: uxDesignImg,
+    avatarImage: avatarDesignRecife,
     name: "Design Recife",
     description: "Um ambiente seguro para trocar feedbacks",
     members: "9.7K",
