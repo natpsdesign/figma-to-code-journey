@@ -26,6 +26,7 @@ const participaCommunities = [
   { image: agileImg, name: "Agile", members: "10K membros" },
   { image: frontendImg, name: "Front-End", members: "10K membros" },
   { image: researchImg, name: "Pesquisa", members: "5K membros" },
+  { image: "__search__", name: "Pesquisar", members: "" },
 ];
 
 const interessaCommunities = [
