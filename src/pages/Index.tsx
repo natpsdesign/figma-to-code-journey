@@ -187,7 +187,7 @@ const Index = () => {
         </section>
 
         {/* Comunidades em destaque */}
-        <section className="mb-6">
+        <section className="mb-2">
           <SectionTitle>Comunidades em destaque</SectionTitle>
           <div className="flex gap-4 overflow-x-auto overflow-y-hidden pl-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {featuredCommunities.map((c) => (
