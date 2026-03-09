@@ -198,7 +198,9 @@ const Index = () => {
       </div>
 
       {/* Bottom Navigation */}
-      <BottomNav />
+      <div className="absolute bottom-0 left-0 right-0">
+        <BottomNav />
+      </div>
     </div>
   );
 };
