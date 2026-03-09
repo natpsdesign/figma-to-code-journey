@@ -146,8 +146,9 @@ const Index = () => {
             <div
               className="grid gap-[10px]"
               style={{
-                gridTemplateColumns: "repeat(4, 162px)",
-                gridTemplateRows: "auto auto",
+                gridTemplateRows: "repeat(2, auto)",
+                gridAutoFlow: "column",
+                gridAutoColumns: "162px",
                 width: "max-content",
               }}
             >
