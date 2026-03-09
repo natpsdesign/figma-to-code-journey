@@ -23,11 +23,11 @@ const FeaturedCard = ({ coverImage, avatarImage, name, description, members }: F
       <div className="flex flex-1 flex-col gap-1 px-4 pt-5 pb-3">
         <h3 className="text-base font-semibold leading-[1.5] text-foreground">{name}</h3>
         <p className="text-xs leading-[1.5] text-muted-foreground">{description}</p>
-        <div className="mt-2 flex items-center gap-2">
-          <span className="rounded-2xl border border-primary bg-card py-1 px-3 text-xs font-semibold leading-[1.5] text-foreground">
+        <div className="mt-3 flex items-center gap-2">
+          <span className="rounded-full border border-border bg-card py-1.5 px-4 text-xs font-semibold leading-none text-foreground">
             {members}
           </span>
-          <button className="rounded-2xl bg-primary py-1 px-3 text-xs font-semibold leading-[1.5] text-primary-foreground">
+          <button className="rounded-full bg-primary py-1.5 px-5 text-xs font-semibold leading-none text-primary-foreground">
             Entrar
           </button>
         </div>
