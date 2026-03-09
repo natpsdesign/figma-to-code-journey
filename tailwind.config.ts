@@ -14,7 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['"Nunito Sans"', 'sans-serif'],
+        nunito: ['"Nunito Sans"', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -52,6 +54,12 @@ export default {
         },
         section: {
           title: "hsl(var(--section-title))",
+        },
+        grey: {
+          200: "hsl(var(--grey-200))",
+          300: "hsl(var(--grey-300))",
+          400: "hsl(var(--grey-400))",
+          500: "hsl(var(--grey-500))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

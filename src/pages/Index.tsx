@@ -1,4 +1,3 @@
-import { ArrowLeft, MoreVertical, Search } from "lucide-react";
 import CommunityCard from "@/components/CommunityCard";
 import FeaturedCard from "@/components/FeaturedCard";
 import BottomNav from "@/components/BottomNav";
@@ -12,9 +11,17 @@ import uxWriterImg from "@/assets/community-ux-writer.png";
 import featuredUxImg from "@/assets/featured-ux-designers.jpg";
 import featuredRecifeImg from "@/assets/featured-design-recife.jpg";
 
+import arrowBack from "@/assets/arrow-back.svg";
+import moreVert from "@/assets/more-vert.svg";
+import searchIcon from "@/assets/search.svg";
+import sinal from "@/assets/sinal.svg";
+import wifi from "@/assets/wifi.svg";
+import bateria from "@/assets/bateria.svg";
+
 const participaCommunities = [
   { image: uiDesignImg, name: "UI Design", members: "12K membros" },
   { image: agileImg, name: "Agile", members: "10K membros" },
+  { image: researchImg, name: "Pesquisa", members: "5K membros" },
   { image: uxDesignImg, name: "UX Design", members: "12K membros" },
   { image: frontendImg, name: "Front-End", members: "10K membros" },
 ];
@@ -22,6 +29,7 @@ const participaCommunities = [
 const interessaCommunities = [
   { image: researchImg, name: "Research", members: "12K membros" },
   { image: uiDesignImg, name: "UI Design", members: "10K membros" },
+  { image: researchImg, name: "Pesquisa", members: "5K membros" },
   { image: uxWriterImg, name: "UX Writer", members: "12K membros" },
   { image: frontendImg, name: "Front-End", members: "10K membros" },
 ];
@@ -41,70 +49,100 @@ const featuredCommunities = [
     description: "Um ambiente seguro para trocar feedbacks",
     members: "9.7K",
   },
+  {
+    coverImage: featuredUxImg,
+    avatarImage: agileImg,
+    name: "Cybersecurity",
+    description: "Lorem ipsum dolor sit amet consectetur. Vitae orci.",
+    members: "9.7K",
+  },
 ];
 
 const SectionTitle = ({ children }: { children: React.ReactNode }) => (
-  <h2 className="mb-3 text-base font-bold text-section-title">{children}</h2>
+  <h2 className="mb-3 px-6 text-base font-bold text-primary">{children}</h2>
 );
 
 const Index = () => {
   return (
-    <div className="relative mx-auto flex min-h-[1081px] w-[390px] flex-col rounded-[24px] bg-card overflow-hidden">
+    <div className="relative mx-auto flex min-h-[1081px] w-[390px] flex-col rounded-[24px] bg-card overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
       {/* Status bar */}
-      <div className="flex items-center justify-between px-5 pt-3 pb-1">
-        <span className="text-sm font-semibold text-foreground">9:41</span>
-        <div className="flex items-center gap-1.5">
-          <svg width="17" height="11" viewBox="0 0 17 11" fill="none"><rect x="0" y="3" width="3" height="8" rx="1" fill="#1e2a3a"/><rect x="4.5" y="2" width="3" height="9" rx="1" fill="#1e2a3a"/><rect x="9" y="0.5" width="3" height="10.5" rx="1" fill="#1e2a3a"/><rect x="13.5" y="0" width="3" height="11" rx="1" fill="#1e2a3a" opacity="0.3"/></svg>
-          <svg width="15" height="11" viewBox="0 0 15 11" fill="none"><path d="M7.5 2C5.09 2 2.88 2.92 1.27 4.47L0 3.2C1.97 1.24 4.6 0 7.5 0C10.4 0 13.03 1.24 15 3.2L13.73 4.47C12.12 2.92 9.91 2 7.5 2ZM3.82 5.98L7.5 10L11.18 5.98C10.12 4.98 8.87 4.5 7.5 4.5C6.13 4.5 4.88 4.98 3.82 5.98Z" fill="#1e2a3a"/></svg>
-          <svg width="25" height="12" viewBox="0 0 25 12" fill="none"><rect x="0" y="1" width="21" height="10" rx="2" stroke="#1e2a3a" strokeWidth="1"/><rect x="22" y="4" width="2" height="4" rx="1" fill="#1e2a3a" opacity="0.4"/><rect x="1.5" y="2.5" width="18" height="7" rx="1" fill="#1e2a3a"/></svg>
+      <div className="absolute top-0 left-0 right-0 z-10 flex h-6 items-center justify-between px-6">
+        <span className="w-[30px] text-center font-poppins text-sm text-muted-foreground">9:41</span>
+        <div className="flex items-center gap-1">
+          <img src={sinal} alt="" className="block h-[10px] w-[17px] object-contain" />
+          <img src={wifi} alt="" className="block h-[10px] w-[15px] object-contain" />
+          <img src={bateria} alt="" className="block h-3 w-[21px] object-contain" />
         </div>
       </div>
 
       {/* Header */}
-      <header className="flex items-center justify-between px-4 py-3">
-        <button aria-label="Voltar">
-          <ArrowLeft className="h-6 w-6 text-foreground" />
+      <header className="relative flex shrink-0 items-center justify-between px-6 pt-[50px] pb-4">
+        <button className="flex h-10 w-10 items-center justify-center" aria-label="Voltar">
+          <img src={arrowBack} alt="" className="block h-[18px] w-[19px]" />
         </button>
-        <h1 className="text-lg font-bold text-foreground">Comunidades</h1>
-        <button aria-label="Menu">
-          <MoreVertical className="h-6 w-6 text-foreground" />
+        <h1 className="text-lg font-bold text-primary">Comunidades</h1>
+        <button className="flex h-10 w-10 items-center justify-center" aria-label="Opções">
+          <img src={moreVert} alt="" className="block h-[18px] w-[5px]" />
         </button>
       </header>
 
       {/* Search */}
-      <div className="px-4 pb-4">
-        <div className="flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2.5">
-          <Search className="h-4 w-4 text-muted-foreground" />
-          <span className="text-sm text-muted-foreground">Pesquisar</span>
+      <div className="shrink-0 px-6 mb-5">
+        <div className="flex items-center gap-4 rounded-[32px] border border-border bg-card px-4 py-3">
+          <img src={searchIcon} alt="" className="shrink-0 h-3.5 w-3.5" />
+          <input
+            type="search"
+            placeholder="Pesquisar"
+            className="flex-1 min-w-0 border-none bg-transparent text-sm text-foreground outline-none placeholder:text-grey-400"
+            aria-label="Pesquisar comunidades"
+          />
         </div>
       </div>
 
       {/* Content */}
-      <div className="flex-1 overflow-y-auto px-4 pb-24">
+      <div className="flex-1 overflow-y-auto overflow-x-hidden pb-6">
         {/* Comunidades que você participa */}
         <section className="mb-6">
           <SectionTitle>Comunidades que você participa</SectionTitle>
-          <div className="grid grid-cols-2 gap-3">
-            {participaCommunities.map((c) => (
-              <CommunityCard key={c.name} {...c} />
-            ))}
+          <div className="overflow-x-auto overflow-y-hidden px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div
+              className="grid gap-[10px]"
+              style={{
+                gridTemplateColumns: "repeat(4, 162px)",
+                gridTemplateRows: "auto auto",
+                width: "max-content",
+              }}
+            >
+              {participaCommunities.map((c, i) => (
+                <CommunityCard key={`${c.name}-${i}`} {...c} />
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Comunidades que podem te interessar */}
         <section className="mb-6">
           <SectionTitle>Comunidades que podem te interessar</SectionTitle>
-          <div className="grid grid-cols-2 gap-3">
-            {interessaCommunities.map((c) => (
-              <CommunityCard key={c.name} {...c} />
-            ))}
+          <div className="overflow-x-auto overflow-y-hidden px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div
+              className="grid gap-[10px]"
+              style={{
+                gridTemplateColumns: "repeat(4, 162px)",
+                gridTemplateRows: "auto auto",
+                width: "max-content",
+              }}
+            >
+              {interessaCommunities.map((c, i) => (
+                <CommunityCard key={`${c.name}-${i}`} {...c} />
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Comunidades em destaque */}
         <section className="mb-6">
           <SectionTitle>Comunidades em destaque</SectionTitle>
-          <div className="flex gap-4 pb-2">
+          <div className="flex gap-4 overflow-x-auto overflow-y-hidden pl-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {featuredCommunities.map((c) => (
               <FeaturedCard key={c.name} {...c} />
             ))}
