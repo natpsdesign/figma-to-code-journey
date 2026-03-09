@@ -163,7 +163,6 @@ body {
   flex: 1;
   padding-bottom: 88px;
   overflow-y: auto;
-  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -193,6 +192,7 @@ body {
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  scroll-snap-type: x proximity;
 }
 
 .cards-scroll::-webkit-scrollbar {
@@ -207,13 +207,17 @@ body {
   grid-auto-columns: 162px;
   gap: 10px;
   width: max-content;
+  min-width: max-content;
 }
 
 .cards-scroll--featured {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   gap: 16px;
   padding-left: var(--content-px);
+  padding-right: var(--content-px);
+  width: 100%;
 }
 
 /* ---------- Cartão pequeno ---------- */
