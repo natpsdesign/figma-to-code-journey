@@ -27,11 +27,11 @@ const participaCommunities = [
 ];
 
 const interessaCommunities = [
-  { image: researchImg, name: "Research", members: "12K membros" },
-  { image: uxWriterImg, name: "UX Writer", members: "12K membros" },
-  { image: uiDesignImg, name: "UI Design", members: "10K membros" },
-  { image: frontendImg, name: "Front-End", members: "10K membros" },
-  { image: researchImg, name: "Pesquisa", members: "5K membros" },
+  { image: interestResearchImg, name: "Research", members: "12K membros" },
+  { image: interestUxWriterImg, name: "UX Writer", members: "12K membros" },
+  { image: interestUiDesignImg, name: "UI Design", members: "10K membros" },
+  { image: interestFrontendImg, name: "Front-End", members: "10K membros" },
+  { image: interestPesquisaImg, name: "Pesquisa", members: "5K membros" },
 ];
 
 const featuredCommunities = [
