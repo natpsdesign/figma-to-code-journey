@@ -14,7 +14,9 @@ import interestUiDesignImg from "@/assets/interest-ui-design.png";
 import interestFrontendImg from "@/assets/interest-frontend.png";
 import interestPesquisaImg from "@/assets/interest-pesquisa.png";
 import featuredUxImg from "@/assets/featured-ux-designers.jpg";
+import avatarUxDesigners from "@/assets/avatar-ux-designers.png";
 import featuredRecifeImg from "@/assets/featured-design-recife.jpg";
+import avatarDesignRecife from "@/assets/avatar-design-recife.png";
 import cybersecurityCover from "@/assets/destaque-cybersecurity.png";
 import cybersecurityAvatar from "@/assets/avatar-cybersecurity.png";
 
@@ -37,14 +39,14 @@ const interessaCommunities = [
 const featuredCommunities = [
   {
     coverImage: featuredUxImg,
-    avatarImage: uxDesignImg,
+    avatarImage: avatarUxDesigners,
     name: "UX Designers",
     description: "Nosso propósito é fortalecer o ecossistema de design",
     members: "9.7K",
   },
   {
     coverImage: featuredRecifeImg,
-    avatarImage: uxDesignImg,
+    avatarImage: avatarDesignRecife,
     name: "Design Recife",
     description: "Um ambiente seguro para trocar feedbacks",
     members: "9.7K",
