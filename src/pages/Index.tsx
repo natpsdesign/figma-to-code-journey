@@ -15,18 +15,18 @@ import cybersecurityAvatar from "@/assets/avatar-cybersecurity.png";
 
 const participaCommunities = [
   { image: uiDesignImg, name: "UI Design", members: "12K membros" },
-  { image: agileImg, name: "Agile", members: "10K membros" },
-  { image: researchImg, name: "Pesquisa", members: "5K membros" },
   { image: uxDesignImg, name: "UX Design", members: "12K membros" },
+  { image: agileImg, name: "Agile", members: "10K membros" },
   { image: frontendImg, name: "Front-End", members: "10K membros" },
+  { image: researchImg, name: "Pesquisa", members: "5K membros" },
 ];
 
 const interessaCommunities = [
   { image: researchImg, name: "Research", members: "12K membros" },
-  { image: uiDesignImg, name: "UI Design", members: "10K membros" },
-  { image: researchImg, name: "Pesquisa", members: "5K membros" },
   { image: uxWriterImg, name: "UX Writer", members: "12K membros" },
+  { image: uiDesignImg, name: "UI Design", members: "10K membros" },
   { image: frontendImg, name: "Front-End", members: "10K membros" },
+  { image: researchImg, name: "Pesquisa", members: "5K membros" },
 ];
 
 const featuredCommunities = [
