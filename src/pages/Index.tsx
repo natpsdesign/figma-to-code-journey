@@ -35,6 +35,7 @@ const interessaCommunities = [
   { image: interestUiDesignImg, name: "UI Design", members: "10K membros" },
   { image: interestFrontendImg, name: "Front-End", members: "10K membros" },
   { image: interestPesquisaImg, name: "Pesquisa", members: "5K membros" },
+  { image: interestPesquisaImg, name: "Pesquisa", members: "5K membros" },
 ];
 
 const featuredCommunities = [
