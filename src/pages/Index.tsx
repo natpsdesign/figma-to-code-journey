@@ -102,7 +102,7 @@ const SearchIcon = () => (
 
 const Index = () => {
   return (
-    <div className="relative mx-auto flex min-h-[1081px] w-[390px] flex-col rounded-[24px] bg-card overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
+    <div className="relative mx-auto flex h-[1081px] w-[390px] flex-col rounded-[24px] bg-card overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
       {/* Status bar */}
       <div className="absolute top-0 left-0 right-0 z-10 flex h-6 items-center justify-between px-6">
         <span className="w-[30px] text-center font-poppins text-sm leading-[21px] text-muted-foreground">9:41</span>
