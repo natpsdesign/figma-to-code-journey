@@ -160,9 +160,21 @@ const Index = () => {
                 width: "max-content",
               }}
             >
-              {participaCommunities.map((c, i) => (
-                <CommunityCard key={`${c.name}-${i}`} {...c} />
-              ))}
+              {participaCommunities.map((c, i) =>
+                c.image === "__search__" ? (
+                  <article
+                    key="search"
+                    className="flex w-[162px] min-h-[72px] items-center justify-center rounded-lg border-[1.5px] border-dashed border-grey-300 bg-grey-200 px-3.5 py-3 cursor-pointer"
+                  >
+                    <button className="flex flex-col items-center gap-1.5 border-none bg-transparent cursor-pointer p-0">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--primary))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                      <span className="text-[13px] font-semibold text-primary">Pesquisar</span>
+                    </button>
+                  </article>
+                ) : (
+                  <CommunityCard key={`${c.name}-${i}`} {...c} />
+                )
+              )}
             </div>
           </div>
         </section>
