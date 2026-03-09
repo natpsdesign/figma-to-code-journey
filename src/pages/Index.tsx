@@ -145,7 +145,7 @@ const Index = () => {
       </div>
 
       {/* Content */}
-      <div className="flex-1 overflow-y-auto overflow-x-hidden pb-6">
+      <div className="flex-1 overflow-y-auto overflow-x-hidden pb-[88px]">
         {/* Comunidades que você participa */}
         <section className="mb-6">
           <SectionTitle>Comunidades que você participa</SectionTitle>
