@@ -193,7 +193,14 @@ body {
   scrollbar-width: none;
   scroll-snap-type: x proximity;
   padding-left: var(--content-px);
-  padding-right: var(--content-px);
+}
+
+.cards-scroll::after {
+  content: "";
+  display: inline-block;
+  min-width: var(--content-px);
+  height: 1px;
+  flex-shrink: 0;
 }
 
 .cards-scroll::-webkit-scrollbar {
@@ -209,6 +216,7 @@ body {
   gap: 10px;
   width: max-content;
   min-width: max-content;
+  margin-right: var(--content-px);
 }
 
 .cards-scroll--featured {
