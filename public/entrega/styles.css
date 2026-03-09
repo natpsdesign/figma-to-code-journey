@@ -216,8 +216,7 @@ body {
   flex-wrap: nowrap;
   gap: 16px;
   padding-left: var(--content-px);
-  padding-right: var(--content-px);
-  width: 100%;
+  padding-right: 0;
 }
 
 /* ---------- Cartão pequeno ---------- */
