@@ -163,7 +163,6 @@ body {
   flex: 1;
   padding-bottom: 88px;
   overflow-y: auto;
-  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
