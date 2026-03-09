@@ -8,6 +8,11 @@ import uxDesignImg from "@/assets/community-ux-design.png";
 import frontendImg from "@/assets/community-frontend.png";
 import researchImg from "@/assets/community-research.png";
 import uxWriterImg from "@/assets/community-ux-writer.png";
+import interestResearchImg from "@/assets/interest-research.png";
+import interestUxWriterImg from "@/assets/interest-ux-writer.png";
+import interestUiDesignImg from "@/assets/interest-ui-design.png";
+import interestFrontendImg from "@/assets/interest-frontend.png";
+import interestPesquisaImg from "@/assets/interest-pesquisa.png";
 import featuredUxImg from "@/assets/featured-ux-designers.jpg";
 import featuredRecifeImg from "@/assets/featured-design-recife.jpg";
 import cybersecurityCover from "@/assets/destaque-cybersecurity.png";
@@ -22,11 +27,11 @@ const participaCommunities = [
 ];
 
 const interessaCommunities = [
-  { image: researchImg, name: "Research", members: "12K membros" },
-  { image: uxWriterImg, name: "UX Writer", members: "12K membros" },
-  { image: uiDesignImg, name: "UI Design", members: "10K membros" },
-  { image: frontendImg, name: "Front-End", members: "10K membros" },
-  { image: researchImg, name: "Pesquisa", members: "5K membros" },
+  { image: interestResearchImg, name: "Research", members: "12K membros" },
+  { image: interestUxWriterImg, name: "UX Writer", members: "12K membros" },
+  { image: interestUiDesignImg, name: "UI Design", members: "10K membros" },
+  { image: interestFrontendImg, name: "Front-End", members: "10K membros" },
+  { image: interestPesquisaImg, name: "Pesquisa", members: "5K membros" },
 ];
 
 const featuredCommunities = [
